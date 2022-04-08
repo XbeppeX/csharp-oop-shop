@@ -3,11 +3,18 @@ using CSharpShop;
 
 
 
-Prodotto Mioprodotto = new Prodotto("banane", "Provenienza Africa", 3, 4);
+Prodotto Mioprodotto = new Prodotto("banane", "Provenienza Africa", 210, 22);
+
+
+Mioprodotto.StampaCalcoloPrezzoConIva();
 
 Mioprodotto.StampaPrezzoConIva();
 
 Mioprodotto.StampaPrezzoSenzaIva();
 
-Mioprodotto.StampaNomeCodice();
+Console.WriteLine("");
+
+Mioprodotto.StampaProdotto();
+
+
 
