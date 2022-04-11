@@ -16,15 +16,20 @@ namespace CSharpShop
 			prezzo = prezzo1;
 			iva = iva1;
 
+			codice = NumeroCasualeCodice();
+
 		}
 
-		
+		public int getCodice()
+        {
+			return codice;
+        }
 
 		public void StampaCalcoloPrezzoConIva()
 		{
 			double ivato = prezzo * iva;
 			double prezzoFinale = prezzo + ivato / 100;
-			Console.WriteLine("Prezzo finale: " + prezzoFinale + "€ IVA: " + ivato / 100 + " €");
+			Console.WriteLine("Prezzo finale: " + prezzoFinale + " € IVA: " + ivato / 100 + " €");
 		}
 
 		public double CalcoloPrezzoConIva()
@@ -60,7 +65,7 @@ namespace CSharpShop
 			Console.WriteLine("Prezzo senza IVA: " + prezzo + " €");
 			Console.WriteLine("Prezzo con IVA: " + CalcoloPrezzoConIva() + " €");
 			Console.WriteLine("Descrizione prodotto: " + descrizione);
-			Console.WriteLine("Nome esteso prodotto " + NumeroCasualeCodice() + nome);
+			Console.WriteLine("Nome esteso prodotto " + codice + nome);
 		}
 	}
 }
